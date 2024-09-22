@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block tempActive %}
+
+active
+
+{% endblock tempActive %}
+
+{% block content %}
+
+<div class="content text-center">
+    <h1 class="diaplay-6 alert alert-success">This is Templates Home</h1>
+</div>
+
+<div class="album py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+            <div class="col">
+                <a href="{% url 'Build' %}">
+                    <img src="{% static 'core/images/SampleR1.svg' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="Example image" width="300" height="700" loading="lazy">
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="{% url 'Build' %}">
+                    <img src="{% static 'core/images/SampleR2.png' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="Example image" width="300" height="700" loading="lazy">
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="{% url 'Build' %}">
+                    <img src="{% static 'core/images/SampleR3.svg' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                        alt="Example image" width="300" height="700" loading="lazy">
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

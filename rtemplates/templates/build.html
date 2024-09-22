@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="content text-center">
+    <h1 class="diaplay-6 alert alert-success">This is the Build Resume Page!</h1>
+</div>
+
+<div class="container text-center my-2">
+
+    <form class="needs-validation m-auto" novalidate="" action="{% url 'Build' %}" method="post">
+        {% csrf_token %}
+        <div class="row g-3">
+            {% with college_details_displayed=False %}
+                {% for fm in forms %}
+                    {% if not college_details_displayed and fm.label == "college_name" %}
+                        <h3>College Details</h3>
+                        {% now "college_details_displayed=True" %}
+                    {% endif %}
+                    {{ fm }} <br>
+                    <div class="invalid-feedback">
+                        {{ fm.non_field_errors }}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+        <div class="container text-center my-3">
+            <button class="w-50 btn btn-outline-dark btn-lg" type="submit">Send Mail</button>
+        </div>
+    </form>
+
+</div>
+
+<br>
+
+{% endblock content %}
+
+{% comment %} {% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="content text-center">
+    <h1 class="diaplay-6 alert alert-success">This is the Build Resume Page!</h1>
+</div>
+
+<div class="container text-center my-2">
+
+    <form class="needs-validation m-auto" novalidate="" action="{% url 'Build' %}" method="post">
+        {% csrf_token %}
+        <div class="row g-3">
+            {% for fm in forms %}
+                {% if fm.lable %}
+                {{fm}} <br>
+                <div class="invalid-feedback">
+                    {{ fm.non_field_errors }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="container text-center my-3">
+            <button class="w-50 btn btn-outline-dark btn-lg" type="submit">Send Mail</button>
+        </div>
+    </form>
+
+</div>
+
+<br>
+
+{% endblock content %} {% endcomment %}
+

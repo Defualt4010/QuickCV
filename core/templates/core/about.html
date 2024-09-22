@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+
+About
+
+{% endblock title %}
+
+{% block aboutActive %}
+
+active
+
+{% endblock aboutActive %}
+
+{% block content %} 
+
+<!-- Image -->
+
+<div class="m-0 p-0 bg-light rounded-3" style="background-color: rgb(217, 241, 255);">
+    <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'core/images/Educational-E.png' %}" style="width: 1900px; height: 600px;" class="d-block w-100" alt="Img">
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="display-3 bg-dark text-center text-light">rFast <br><span>Everyone Job Rready!..</span></h1>
+                {% comment %} <h3 class="display-3 bg-dark text-center text-light"></h3> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <img class="d-block mx-auto shadow-lg mb-4 rounded-circle" src="{% static 'core/images/rFast-high-resolution-logo-black.png' %}" alt="" width="200" height="200">
+    <div class="px-4 pt-5 text-center">
+        <span><h1 class="display-4 fw-bold">rFast</h1><h3>Everyone Job Rready!..</h3></span>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">At rFast, we believe in empowering individuals to craft compelling resumes that showcase their unique skills and experiences. 🚀 Our mission is to provide a user-friendly platform that simplifies the resume-building process, allowing users to create professional and polished resumes effortlessly. 📝 Whether you're a recent graduate entering the workforce or a seasoned professional seeking new opportunities, rFast is here to support you on your career journey. 💼 With a focus on innovation, usability, and quality, we strive to revolutionize the way resumes are created and presented in today's competitive job market. 🌟 Join us in unlocking your potential and taking the next step towards your career goals with rFast!</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="container">
+        <div class="container my-5 mx-2">
+            <h1 class="display-5 fw-bold pb-2 border-bottom">Our Founder</h1>
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <div class="container my-5 pt-5 py-5">
+                        <h2 class="featurette-heading">Dhiraj J. Tiwari</h2>
+                        <p class="lead">
+                            Welcome to <b>rFast</b>, your ultimate destination for crafting impressive resumes! 💼 I'm Dhiraj, an enthusiastic entrepreneur with a passion for empowering individuals to land their dream jobs through impactful resumes. 🌟 As the driving force behind rFast, I embarked on this journey with a vision to revolutionize the resume-building experience for professionals like you. 🎯I understand the importance of a well-crafted resume in making a lasting impression in today's competitive job market. 💡 rFast is not just a project; 🔧 it's a manifestation of my commitment to providing you with the tools and resources needed to succeed in your career endeavors. ...<small>Dhiraj J. Tiwari</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="my-5 py-5 col-md-5 order-md-1">
+                    <img class="img-fluid shadow-lg rounded-circle" style="width: 350px; height: 350px;" src="{% static 'core/images/rFast-high-resolution-logo-white.png' %}" alt="Img"
+                        name="Founder">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<div class="container pt-5 pb-5 ps-5 text-center">
+    <div class="p-5 rounded-3" style="background-color: rgb(217, 241, 255);">
+        <div class="container">
+            <h1 class="display-5 fw-bold pb-3">Our Vision</h1>
+            <div class="container my-3 pt-5 py-5">
+                </h2>
+                <p class="lead">
+                    🌟 At <b>rFast</b>, we envision a future where every individual has access to exceptional resume templates tailored to their unique career aspirations. 🌟 Our commitment lies in continuously enhancing our platform to offer a diverse range of templates, each meticulously crafted to resonate with various industries and job roles. 🎨 We strive to provide templates that not only captivate recruiters' attention but also reflect the personality and professionalism of our users. 💼 Our vision extends beyond mere aesthetics; we aim to integrate cutting-edge design elements and innovative features into our templates, ensuring that they meet the evolving demands of the modern job market. 🚀 Whether it's a sleek and minimalist design for tech-savvy roles or a bold and expressive layout for creative professionals, our templates are designed to empower users to stand out from the crowd and make a lasting impression. With our unwavering dedication to excellence, we are committed to shaping the future of resume building and setting new standards of quality and innovation in the industry.
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
